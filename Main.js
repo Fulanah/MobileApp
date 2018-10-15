@@ -1,4 +1,4 @@
-//import student class and create prompt for name and matric number
+//import student class and create prompt for name and matric number-Mizi
 let {person} = require ('./Students.js');
 
 const readline = require('readline');
