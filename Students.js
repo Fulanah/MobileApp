@@ -1,4 +1,5 @@
-/*created by: Balqis */
+/*created the class: Balqis */
+//edit getter by adding 'this' when return : mizi
 
 class Student {
     constructor(name,matricNo,major){
@@ -8,7 +9,7 @@ class Student {
     }
 
     get Name(){
-      return name;
+      return this.name;
     }
 
     set Name(name){
@@ -16,7 +17,7 @@ class Student {
     }
 
     get MatricNo(){
-        return matricNo;
+        return this.matricNo;
     }
 
     set MatricNo(matricNo){
@@ -24,7 +25,7 @@ class Student {
     }
 
     get Major(){
-        return major;
+        return this.major;
     }
 
     set Major(major){
@@ -37,7 +38,7 @@ class Student {
 
 }
 
+
+//edit export code & create object 'person' : mizi
 let person = new Student();
-
-
 module.exports = {person};
