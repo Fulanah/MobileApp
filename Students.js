@@ -38,7 +38,9 @@ class Student {
 
 }
 
+/*edit export code & create object 'person' : mizi
+let person= new Student();
+let id= new Student(); //Balqis
+let course= new Student(); //Balqis */
 
-//edit export code & create object 'person' : mizi
-let person = new Student();
-module.exports = {person};
+module.exports.Student = Student; //edited by Balqis
