@@ -15,17 +15,20 @@ function alphanumeric(inputtxt)
 { 
 var letters = /^[a-zA-Z]+$/;
 if(inputtxt.match(letters))
-{
-//alert('Your registration number have accepted : you can try another');
-//document.form1.text1.focus();
-return true;
-}
-else
-{
-//alert('Please input alphanumeric characters only');
-return false;
-}
-}
+{  return true;
+}  else
+{  return false;
+}}
+
+//balqis
+function numeric(inputtxt)
+{ 
+var letters = /^[0-9]+$/;
+if(inputtxt.match(letters))
+{  return true;
+}  else
+{  return false;
+}}
 
 
 //rl.question for student name : Mizi
@@ -35,34 +38,54 @@ rl.question('Name : ', (name) => {
     
     if(alphanumeric(name)==true){
         person.Name = name;
-        console.log(`Your name is ${person.Name}`);
+        userInputMatric();
         ;
-    }else{
+        }else{
         console.log('Please enter alphabets only')
         userInputName();
-         
-    }
-}); 
+        }
+    }); 
 
 }
 
-userInputName();
+//userInputName();
 
-function userInputMatric (){
+function userInputMatric(){
     rl.question('Matric No. : ', (matricNo) => {
-        var checkMatric = matricNo.split("");
-       return  person.MatricNo = matricNo;
+
+        if(numeric(matricNo)==true){
+            person.MatricNo = matricNo;
+            userInputMajor();
+            ;
+        }else{
+            userInputMatric();
+            console.log('Please enter numbers only');
+             
+        }    
     }); 
 }
+//userInputMatric();
       
         function userInputMajor(){
         rl.question('Major (Information Technology/ Computer Science): ', (major) =>{
-            if(major != "Information Technology" || major != "Computer Science" ){
-                major = ("Major invalid Please re-enter:");
-            } 
-           return  person.Major = major;
+
+            if(major == "BIT" || major == "Computer Science" ){
+                person.Major = major;
+                console.log(person.Display);
+
+                } else {
+                console.log(`Major not recognized. Please re-enter`);
+                userInputMajor();
+                }
+        
+
         });
-        }
+    }
+
+    export function userInputName(){
+    };
+    display();
+
     
    
 
