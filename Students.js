@@ -1,6 +1,7 @@
 /*created the class: Balqis */
 //edit getter by adding 'this' when return : mizi
 
+
 class Student {
     constructor(name,matricNo,major){
         this.name = name;
@@ -32,15 +33,15 @@ class Student {
         this.major = major;
     }
 
-    display(String ) {
-        
+    display() {
+       output.userInputName();
     }
 
 }
 
-/*edit export code & create object 'person' : mizi
-let person= new Student();
-let id= new Student(); //Balqis
-let course= new Student(); //Balqis */
+//edit export code & create object 'person' : mizi
+//let person= new Student();
 
-module.exports.Student = Student; //edited by Balqis
+//console.log(person.Display);
+
+module.exports = {Student}; //edited by Balqis
